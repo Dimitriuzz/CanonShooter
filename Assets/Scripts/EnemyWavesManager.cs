@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BallistaShooter
 {
@@ -10,13 +11,22 @@ namespace BallistaShooter
         //[SerializeField] Enemy m_EnemyPrefab;
         [SerializeField] private Enemy[] m_EnemysPrefab;
         [SerializeField] private int activeEnemyCount = 0;
+        [SerializeField] private Text m_WaveText;
+        [SerializeField] private Text m_EnemyCountText;
+
+
+        private int m_WaveNumber = 0;
        
         public static event Action OnAllWavesDead;
         public static event Action EnemySpawned;
 
+        public static event Action<Enemy> OnEnemySpawn;
+
         private void RecordEnemyDead() 
         {
-            if (--activeEnemyCount == 0)
+            activeEnemyCount--;
+            m_EnemyCountText.text = activeEnemyCount.ToString() + " врагов";
+            if (activeEnemyCount == 0)
             {
                 if (currentWave)
                 {
@@ -50,6 +60,7 @@ namespace BallistaShooter
                         e.OnEnd += RecordEnemyDead;
                         //e.Use(asset);
                         e.GetComponent<TD_PatrolController>().SetPath(paths[pathIndex]);
+                        OnEnemySpawn?.Invoke(e);
                         activeEnemyCount += 1;
                         
                     }
@@ -59,6 +70,9 @@ namespace BallistaShooter
             }
             EnemySpawned?.Invoke();
             currentWave = currentWave.PrepareNext(SpawnEnemies);
+            m_EnemyCountText.text = activeEnemyCount.ToString() + " врагов";
+            m_WaveNumber++;
+            m_WaveText.text = m_WaveNumber.ToString() + " волна";
         }
 
         public void ForceNextWave()

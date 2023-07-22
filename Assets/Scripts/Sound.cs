@@ -15,6 +15,7 @@ namespace BallistaShooter
         Dying=6,
         Damage=7,
         Fire=8,
+        FireHit=9
 
 
 

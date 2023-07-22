@@ -47,7 +47,7 @@ namespace BallistaShooter
                     //enemy.isHit = true;
                     //enemy.Selection.gameObject.SetActive(false);
                     enemy.TakeDamage(m_Damage, m_DamageType);
-                    Destroy(gameObject);
+                    
 
                     //Debug.Log("damage " + m_Damage);
                     // }
@@ -67,6 +67,7 @@ namespace BallistaShooter
                     
                     
                 }
+                Destroy(gameObject);
             }
 
             

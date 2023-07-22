@@ -13,7 +13,7 @@ public class TDPlayer : Player
     }
 
 
-    [SerializeField] private int m_Gold = 0;
+    [SerializeField] public int m_Gold = 0;
     [SerializeField] private int m_LevelTime;
     public float m_CurrentTime;
     private float fireRate=1;

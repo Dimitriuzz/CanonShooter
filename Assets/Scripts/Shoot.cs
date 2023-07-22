@@ -50,6 +50,13 @@ namespace BallistaShooter
 			//EnemyWavesManager.OnAllWavesDead += Unsubscribe;
 			currentArrow = arrowPrefabs[0];
 		}
+
+		public void ChangeReloadTime(float reloadBonus)
+        {
+			reloadTime -= reloadBonus;
+			fillAmountStep= reloadTime * 0.01f;
+			Debug.Log("reload used");
+		}
 		private void Update()
 		{
 

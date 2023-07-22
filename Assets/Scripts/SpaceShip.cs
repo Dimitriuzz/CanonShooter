@@ -28,6 +28,8 @@ namespace BallistaShooter
         [SerializeField] private float m_Mobility;
         public float Mobility => m_Mobility;
 
+        private float m_MobilityBackup;
+
         /// <summary>
         /// Максимальная линейная скорость.
         /// </summary>
@@ -43,6 +45,18 @@ namespace BallistaShooter
         /// </summary>
         private Rigidbody m_Rigid;
         public Rigidbody Rigid => m_Rigid;
+
+        public void StopMovement()
+        {
+            m_MobilityBackup = m_Mobility;
+            m_Mobility = 0;
+
+        }
+
+        public void ContinueMovement()
+        {
+            m_Mobility = m_MobilityBackup;
+        }
 
         #region Public API
 
