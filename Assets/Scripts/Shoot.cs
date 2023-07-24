@@ -23,6 +23,7 @@ namespace BallistaShooter
 
 		[SerializeField] private Image progressBar;
 		[SerializeField] Transform shootPoint;
+		[SerializeField] Text m_reloadTime;
 
 		[SerializeField] private float rotationSpeed;
 		private float currentTime=0;
@@ -49,6 +50,7 @@ namespace BallistaShooter
 			//EnemyWavesManager.EnemySpawned += FindEnemies;
 			//EnemyWavesManager.OnAllWavesDead += Unsubscribe;
 			currentArrow = arrowPrefabs[0];
+			Debug.Log("fillamount:" + fillAmountStep);
 		}
 
 		public void ChangeReloadTime(float reloadBonus)
@@ -72,18 +74,25 @@ namespace BallistaShooter
 
             }
 				//AImBallista();
+
 			   AImBallista(Input.GetAxis("Horizontal"));
-				if (progressBar.fillAmount < 1)
+				if (currentTime < reloadTime)
 				{
 					currentTime += Time.deltaTime;
-					if (currentTime >= (lastTime + fillAmountStep))
+				Debug.Log("current time:" + currentTime);
+					//if (currentTime >= (lastTime + fillAmountStep))
 					{
-						progressBar.fillAmount += 0.01f;
-						lastTime = currentTime;
+					Debug.Log("last time:" + lastTime);
+					
+					m_reloadTime.text = System.Math.Round(currentTime,1).ToString()+" сек";
+						progressBar.fillAmount = currentTime/reloadTime;
+					Debug.Log("fill ammount:" + progressBar.fillAmount);
+					//lastTime = currentTime;
 					}
 				}
+				else m_reloadTime.text = System.Math.Round(reloadTime, 1).ToString() + " сек";
 
-				if (Input.GetKeyDown(KeyCode.Space) && progressBar.fillAmount == 1)
+			if (Input.GetKeyDown(KeyCode.Space) && progressBar.fillAmount == 1)
 				{
 					Fire();
 					progressBar.fillAmount = 0;
