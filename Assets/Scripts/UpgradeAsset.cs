@@ -1,7 +1,8 @@
 ﻿
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     
 
@@ -14,7 +15,7 @@ namespace BallistaShooter
         [Header("settings")]
         public int[] costByLevel = { 1 };
 
-        public string name;
+        [FormerlySerializedAs("name")] public string UpgradeName;
     }
 
     //didjifddifj//

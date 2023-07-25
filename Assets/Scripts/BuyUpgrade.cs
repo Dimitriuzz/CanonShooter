@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     public class BuyUpgrade : MonoBehaviour
     {
@@ -15,7 +15,7 @@ namespace BallistaShooter
 
         public void Initialise()
         {
-            Debug.Log(asset.name);
+            Debug.Log(asset.UpgradeName);
             upgradeIcon.sprite = asset.sprite;
             var savedlevel = Upgrades.GetUpgradeLevel(asset);
             

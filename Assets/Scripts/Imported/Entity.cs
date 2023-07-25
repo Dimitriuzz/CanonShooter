@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     /// <summary>
     /// Базовый класс всех интерактивных игровых объектов на сцене.

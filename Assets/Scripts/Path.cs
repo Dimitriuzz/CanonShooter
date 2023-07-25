@@ -2,14 +2,14 @@
 using UnityEngine;
 
 
-namespace BallistaShooter
+namespace CannonShooter
 {
 
     public class Path : MonoBehaviour
     {
         [SerializeField] private AIPointPatrol[] points;
-        [SerializeField] private CircleArea startArea;
-        public CircleArea StartArea { get { return startArea; } }
+        [SerializeField] private CubeArea startArea;
+        public CubeArea StartArea { get { return startArea; } }
 
         public int Lenght { get => points.Length; }
 
@@ -20,7 +20,7 @@ namespace BallistaShooter
             Gizmos.color = Color.green;
 
             foreach (var point in points)
-            Gizmos.DrawSphere(point.transform.position, point.Radius);
+                Gizmos.DrawSphere(point.transform.position, point.Radius);
         }
     }
 }

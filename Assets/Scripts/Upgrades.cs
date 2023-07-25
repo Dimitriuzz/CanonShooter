@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-    namespace BallistaShooter
+    namespace CannonShooter
     {
         public class Upgrades : MonoSingleton<Upgrades>
         {
@@ -65,7 +65,7 @@ using UnityEngine;
             {
                 if (upgrade.asset == asset)
                 {
-                    Debug.Log("upgrade " + asset.name + "score " + upgrade.level);
+                    Debug.Log("upgrade " + asset.UpgradeName + "score " + upgrade.level);
                     return upgrade.level;
                 }
             }

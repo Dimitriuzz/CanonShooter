@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     public class EnemyWave: MonoBehaviour
     {
@@ -47,10 +47,10 @@ namespace BallistaShooter
         private void Update()
         {
            if(Time.time>=prepareTime)
-            {
-                enabled = false;
-                OnWaveReady?.Invoke();
-            }
+           {
+               enabled = false;
+               OnWaveReady?.Invoke();
+           }
         }
 
         public IEnumerable<(Enemy asset, int count, int pathIndex)> EnumerateSquads()
@@ -59,14 +59,12 @@ namespace BallistaShooter
             {
                 foreach (var squad in groups[i].squads)
                 {
-
-
                     yield return (squad.enemyPrefab, squad.count, i);
                 }
             }
         }
 
-        [SerializeField] private EnemyWave next;
+        [SerializeField] public EnemyWave next;
         public EnemyWave PrepareNext(Action spawnEnemies)
         {
             OnWaveReady -= spawnEnemies;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     /// <summary>
     /// Определение эпизода как набора уровней. Уровни идут последовательно.

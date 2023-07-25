@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-namespace BallistaShooter
+namespace CannonShooter
 {
 
     public class LevelWaveCondition : MonoBehaviour, ILevelCondition

@@ -2,31 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5d7e287-4f03-4ca6-8d1a-226981ffed1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/EarthElemental.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/EarthElemental.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/FireElemental.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/FireElemental.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/IceElemental.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/IceElemental.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TrainingGrounds.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TrainingGrounds.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Imported/AIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Imported/AIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TDPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TDPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TextUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TextUpdate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BallistaStudent/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BallistaStudent/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ballista.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ballista.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TDLevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TDLevelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestScripts/AIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestScripts/AIController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SNGhWZmRwgB7nXlw3cWQ5NlJzW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -68,6 +75,12 @@
       <updated>1688979763637</updated>
       <workItem from="1688979815527" duration="1659000" />
       <workItem from="1689007766013" duration="8351000" />
+      <workItem from="1689680631664" duration="1437000" />
+      <workItem from="1689705093395" duration="1253000" />
+      <workItem from="1689933642461" duration="9126000" />
+      <workItem from="1690106894602" duration="13681000" />
+      <workItem from="1690194870619" duration="1369000" />
+      <workItem from="1690218007520" duration="6877000" />
     </task>
     <servers />
   </component>
@@ -89,6 +102,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 
 using UnityEngine;
-using BallistaShooter;
+using CannonShooter;
 
 public class TimeLevelCondition : MonoBehaviour, ILevelCondition
 {

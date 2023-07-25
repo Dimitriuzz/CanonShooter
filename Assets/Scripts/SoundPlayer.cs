@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     [RequireComponent(typeof(AudioSource))]
     public class SoundPlayer : MonoSingleton<SoundPlayer>

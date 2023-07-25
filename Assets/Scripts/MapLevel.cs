@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace BallistaShooter
+namespace CannonShooter
 {
 
     public class MapLevel : MonoBehaviour

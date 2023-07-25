@@ -2,7 +2,7 @@
 using System.IO;
 using UnityEngine;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     [Serializable]
     public class Saver<T>

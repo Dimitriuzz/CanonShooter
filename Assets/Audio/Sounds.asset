@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03224b08ce6cd8146980545273271478, type: 3}
   m_Name: Sounds
   m_EditorClassIdentifier: 
-  m_Sounds: []
+  m_Sounds:
+  - {fileID: 8300000, guid: 39e304de9036dd840ba8fd718e58d83b, type: 3}
+  - {fileID: 8300000, guid: e497ff4d87c0e7047b55817e925d9bfd, type: 3}
+  - {fileID: 8300000, guid: caf221957c9511b40b7ca864d21068e1, type: 3}
+  - {fileID: 8300000, guid: 2a990d12865045b408c0e41ec9223435, type: 3}
+  - {fileID: 8300000, guid: 262fff54feb3bdd40b81cf72d5a93264, type: 3}
+  - {fileID: 8300000, guid: 0715aa5cb25318e40a6a15afbca8ce45, type: 3}
+  - {fileID: 8300000, guid: 48ee43d165866524fafdf1579870ee50, type: 3}
+  - {fileID: 8300000, guid: bb1d5a8d576248f4dbc83d921505cca3, type: 3}
+  - {fileID: 8300000, guid: 3d1fc4a96b1966146aaab5c73dba6cdc, type: 3}
+  - {fileID: 8300000, guid: f0b39cd4e293dee499ef306f7ba1d263, type: 3}

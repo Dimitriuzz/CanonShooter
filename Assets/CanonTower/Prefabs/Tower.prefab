@@ -225,10 +225,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471166}
-  - component: {fileID: 1380751570}
-  - component: {fileID: 1380751571}
-  - component: {fileID: 1380751572}
-  - component: {fileID: 1380751573}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -252,72 +248,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1380751570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c27128802822c4183cc0b0873c63ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DoNotDestroyOnLoad: 0
-  m_NumLives: 0
-  m_Ship: {fileID: 0}
-  m_PlayerShipPrefab: {fileID: 0}
-  m_Gold: 0
-  m_LevelTime: 0
-  m_CurrentTime: 0
-  m_TowerPrefab: {fileID: 0}
-  healthUpgrade: {fileID: 11400000, guid: 4fbf9f7bcfcc6784dafcb73416292763, type: 2}
-  fireRateUpgrade: {fileID: 11400000, guid: 133f26d418f74d34aaea45be6d7b8013, type: 2}
-  timeUpgrade: {fileID: 11400000, guid: 8ecb3c8f165ff604581a06e8a7c84598, type: 2}
---- !u!114 &1380751571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c96740c6442bf7b4b80d4bf6e1cf4126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Radius: 3.37
---- !u!114 &1380751572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2953cb239ca20824aa31e3cc7f4dc092, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLimit: 400
---- !u!114 &1380751573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 165880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02066a1a32984943a7c38b2428831f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DoNotDestroyOnLoad: 0
-  m_ReferenceTime: 400
-  m_EventLevelCompleted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &171538
 GameObject:
   m_ObjectHideFlags: 0

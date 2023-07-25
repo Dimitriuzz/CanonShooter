@@ -1,52 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
-    /// <summary>
-    /// Интерфейс условия прохождения уровня.
-    /// </summary>
     public interface ILevelCondition
     {
-        /// <summary>
-        /// True если условие выполнено.
-        /// </summary>
         bool IsCompleted { get; }
     }
-
-    /// <summary>
-    /// Контроллер прохождения уровня.
-    /// Определяет логику завершения уровня посредством проверки условий.
-    /// Мы накидываем скрипты условий внутрь левел контроллера,
-    /// которые потом автоматически подцепятся.
-    /// 
-    /// Если условий 0 то уровень будет играть вечно.
-    /// Контроллер уровня является синглтоном, но включать опцию m_DoNotDestroyOnLoad нельзя.
-    /// т.к. он должен удалится при смене уровня.
-    /// </summary>
+    
     public class LevelController : MonoSingleton<LevelController>
     {
-        /// <summary>
-        /// Время прохождения в секундах за которое будут начисляться очки.
-        /// </summary>
+
         [SerializeField] protected int m_ReferenceTime;
         public int ReferenceTime => m_ReferenceTime;
 
-        /// <summary>
-        /// Событие которое будет вызвано когда уровень будет выполнен. Вызывается один раз.
-        /// </summary>
         [SerializeField] protected UnityEvent m_EventLevelCompleted;
-
-        /// <summary>
-        /// Массив условий для успешного прохождения уровня.
-        /// </summary>
+        
         private ILevelCondition[] m_Conditions;
 
-        private bool m_IsLevelCompleted; // флаг отсылки события прохождения один раз.
+        private bool m_IsLevelCompleted; 
 
-        protected float m_LevelTime; // текущее время прохождения уровня.
+        protected float m_LevelTime; 
         public float LevelTime => m_LevelTime;
 
         #region Unity events
@@ -60,19 +34,12 @@ namespace BallistaShooter
         {
             if (!m_IsLevelCompleted)
             {
-                m_LevelTime += Time.deltaTime;
+                //m_LevelTime += Time.deltaTime;
 
                 CheckLevelConditions();
             }
-
-
         }
-
         #endregion
-
-        /// <summary>
-        /// Метод проверки условий прохождения.
-        /// </summary>
         
         public void LevelCompleted()
         {

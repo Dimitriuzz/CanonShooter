@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     /// <summary>
     /// Контроллер переходов между уровнями. Должен быть с пометкой DoNotDetroyOnLoad
@@ -74,14 +74,5 @@ namespace BallistaShooter
                 SceneManager.LoadScene(CurrentEpisode.Levels[CurrentLevel]);
             }
         }
-
-        #region Ship select
-
-        /// <summary>
-        /// Выбранный игроком корабль для прохождения.
-        /// </summary>
-        public static SpaceShip PlayerShipPrefab { get; set; }
-
-        #endregion
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 using System;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
 
     public class MapCompletion : MonoSingleton<MapCompletion>

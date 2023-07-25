@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
 
     public class ScenesNavigation : MonoBehaviour

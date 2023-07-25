@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     public class LevelDisplayController : MonoBehaviour
     {

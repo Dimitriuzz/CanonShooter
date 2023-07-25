@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     [CreateAssetMenu()]
     public class Sounds : ScriptableObject
@@ -31,6 +31,8 @@ namespace BallistaShooter
                     target.m_Sounds[i] = EditorGUILayout.ObjectField($"{(Sound)i}:",
                         target.m_Sounds[i], typeof(AudioClip), false) as AudioClip;
                 }
+                
+                EditorUtility.SetDirty(target);
             }
         }
 #endif

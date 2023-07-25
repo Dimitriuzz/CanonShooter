@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     public enum ImpactEffectType
     { 
@@ -23,15 +23,14 @@ namespace BallistaShooter
         {
             if (m_EffectType == ImpactEffectType.Plasma)
             {
-                RaycastHit2D[] hit;
-                hit = Physics2D.RaycastAll(transform.position, transform.up, m_EffectRange);
+                var hit = Physics2D.RaycastAll(transform.position, transform.up, m_EffectRange);
                 transform.Translate(0, 0, 0, Space.Self);
                 Debug.Log("number :" + hit.Length);
                 for (int i = 0; i < hit.Length; i++)
                 {
                     //Debug.Log("Got :" + hit[i].transform.root.name);
                     Destructible dest = hit[i].collider.transform.root.GetComponent<Destructible>();
-                    var destnum = hit[i].collider.transform.root.GetComponent<BallistaShooter.Enemy>();
+                    var destnum = hit[i].collider.transform.root.GetComponent<Enemy>();
                     if (dest != null)
                     {
                         dest.ApplyDamage(m_EffectDamage);

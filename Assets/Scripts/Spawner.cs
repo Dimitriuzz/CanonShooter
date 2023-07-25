@@ -2,24 +2,24 @@
 using UnityEngine;
 
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     public abstract class Spawner : MonoBehaviour
     {
         // Start is called before the first frame update
         protected abstract GameObject GenerateSpawnedEntity();
 
-        [SerializeField] private CircleArea m_Area;
+        [SerializeField] private CubeArea m_Area;
 
         public enum SpawnMode
         {
             /// <summary>
-            /// На методе Start()
+            /// РќР° РјРµС‚РѕРґРµ Start()
             /// </summary>
             Start,
 
             /// <summary>
-            /// Периодически используя время m_RespawnTime
+            /// РџРµСЂРёРѕРґРёС‡РµСЃРєРё РёСЃРїРѕР»СЊР·СѓСЏ РІСЂРµРјСЏ m_RespawnTime
             /// </summary>
             Loop
         }
@@ -27,12 +27,12 @@ namespace BallistaShooter
         [SerializeField] private SpawnMode m_SpawnMode;
 
         /// <summary>
-        /// Кол-во объектов которые будут разом заспавнены.
+        /// РљРѕР»-РІРѕ РѕР±СЉРµРєС‚РѕРІ РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ СЂР°Р·РѕРј Р·Р°СЃРїР°РІРЅРµРЅС‹.
         /// </summary>
         [SerializeField] private int m_NumSpawns;
 
         /// <summary>
-        /// Время респавна. Здесь важно заметить что респавн таймер должен быть больше времени жизни объектов.
+        /// Р’СЂРµРјСЏ СЂРµСЃРїР°РІРЅР°. Р—РґРµСЃСЊ РІР°Р¶РЅРѕ Р·Р°РјРµС‚РёС‚СЊ С‡С‚Рѕ СЂРµСЃРїР°РІРЅ С‚Р°Р№РјРµСЂ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РІСЂРµРјРµРЅРё Р¶РёР·РЅРё РѕР±СЉРµРєС‚РѕРІ.
         /// </summary>
         [SerializeField] private float m_RespawnTime;
 
@@ -63,7 +63,7 @@ namespace BallistaShooter
             for (int i = 0; i < m_NumSpawns; i++)
             {
                 var e = GenerateSpawnedEntity();
-                e.transform.position = m_Area.RandomInsideZone;
+                e.transform.position = m_Area.RandomInsideZone();
             }
         }
     }

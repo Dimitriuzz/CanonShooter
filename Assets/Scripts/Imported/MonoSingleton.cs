@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     /// <summary>
     /// Singleton for MonoBehaviours

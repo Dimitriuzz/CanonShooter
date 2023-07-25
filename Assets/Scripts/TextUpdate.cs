@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     public class TextUpdate : MonoBehaviour
     {
@@ -19,13 +19,13 @@ namespace BallistaShooter
             switch (source)
             {
                 case UpdateSource.Gold:
-                    TDPlayer.Instance.GoldUpdateSubscribe(UpdateText);
+                    Player.Instance.GoldUpdateSubscribe(UpdateText);
                     break;
                 case UpdateSource.Life:
-                    TDPlayer.Instance.LifeUpdateSubscribe(UpdateText);
+                    Player.Instance.LifeUpdateSubscribe(UpdateText);
                     break;
                 case UpdateSource.Time:
-                    TDPlayer.Instance.TimeUpdateSubscribe(UpdateText);
+                    Player.Instance.TimeUpdateSubscribe(UpdateText);
                     break;
             }
 
@@ -36,13 +36,13 @@ namespace BallistaShooter
             switch (source)
             {
                 case UpdateSource.Gold:
-                    TDPlayer.Instance.OnGoldUpdate -= UpdateText;
+                    Player.Instance.OnGoldUpdate -= UpdateText;
                     break;
                 case UpdateSource.Life:
-                    TDPlayer.Instance.OnLifeUpdate -= UpdateText;
+                    Player.Instance.OnLifeUpdate -= UpdateText;
                     break;
                 case UpdateSource.Time:
-                    TDPlayer.Instance.OnTimeUpdate -= UpdateText;
+                    Player.Instance.OnTimeUpdate -= UpdateText;
                     break;
             }
         }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     [RequireComponent(typeof(MapLevel))]
     public class BranchLevel : MonoBehaviour

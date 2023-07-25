@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using BallistaShooter;
+using CannonShooter;
 
-namespace BallistaShooter
+namespace CannonShooter
 {
     /// <summary>
     /// Уничтожаемый объект на сцене. То что может иметь хит поинты.
@@ -18,22 +18,35 @@ namespace BallistaShooter
         /// </summary>
         [SerializeField] private bool m_Indestructible;
         [SerializeField] private GameObject remainsPrefab;
+
         public bool IsIndestructible => m_Indestructible;
-        
 
         /// <summary>
         /// Стартовое кол-во хитпоинтов.
         /// </summary>
-        [SerializeField] private int m_HitPoints;
+        [SerializeField] protected int m_HitPoints;
 
         [SerializeField] GameObject deathEffect;
-        
+
         /// <summary>
         /// Текущие хит поинты
         /// </summary>
-        private int m_CurrentHitPoints;
+        protected int m_CurrentHitPoints;
+
         public int CurrentHitPoints => m_CurrentHitPoints;
+
         public int MaxtHitPoints => m_HitPoints;
+
+        /// <summary>
+        /// Кол-во очков за уничтожение.
+        /// </summary>
+        [SerializeField] private int m_ScoreValue;
+        public int ScoreValue => m_ScoreValue;
+        
+        [SerializeField] private UnityEvent m_EventOnDeath;
+        public UnityEvent EventOnDeath => m_EventOnDeath;
+
+        [SerializeField] private ImpactEffect m_ExplosionPrefab;
 
         #endregion
 
@@ -48,7 +61,9 @@ namespace BallistaShooter
 
         private static HashSet<Destructible> m_AllDestructibles;
 
+
         public static IReadOnlyCollection<Destructible> AllDestructibles => m_AllDestructibles;
+
 
         protected virtual void OnEnable()
         {
@@ -63,7 +78,7 @@ namespace BallistaShooter
             m_AllDestructibles.Remove(this);
         }
 
-        #endregion 
+        #endregion
 
         #endregion
 
@@ -75,19 +90,19 @@ namespace BallistaShooter
         /// <param name="damage"></param>
         public void ApplyDamage(int damage)
         {
-            if (m_Indestructible)
+            if (m_Indestructible || damage <= 0)
                 return;
 
             m_CurrentHitPoints -= damage;
             Debug.Log(damage + " applied");
 
-            if (m_CurrentHitPoints < 0)
+            if (m_CurrentHitPoints <= 0)
                 OnDeath();
         }
 
-        public void AddHitPoints(float hp)
+        public void AddHitPoints(int hp)
         {
-            m_CurrentHitPoints = (int)Mathf.Clamp(m_CurrentHitPoints + hp, 0, m_HitPoints);
+            m_CurrentHitPoints = Mathf.Clamp(m_CurrentHitPoints + hp, 0, m_HitPoints);
         }
 
         #endregion
@@ -109,62 +124,23 @@ namespace BallistaShooter
 
             if (remainsPrefab != null)
             {
-                var remains = Instantiate(remainsPrefab.gameObject);
-                remains.transform.position = transform.position;
+                Instantiate(remainsPrefab, transform.position, Quaternion.identity);
             }
-
-
-            Destroy(gameObject);
-
+            
             m_EventOnDeath?.Invoke();
+
+            Player.Instance.AddKill();
+            
+            Destroy(gameObject);
         }
 
         public void DeathEffectUse()
         {
             if (deathEffect != null)
             {
-                var explosion = Instantiate(deathEffect);
-                explosion.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-                explosion.gameObject.SetActive(true);
+                Instantiate(deathEffect, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
             }
         }
-
-        [SerializeField] private UnityEvent m_EventOnDeath;
-        public UnityEvent EventOnDeath => m_EventOnDeath;
-
-        [SerializeField] private ImpactEffect m_ExplosionPrefab;
-
-        #region Teams
-
-        /// <summary>
-        /// Полностью нейтральный тим ид. Боты будут игнорировать такие объекты.
-        /// </summary>
-        public const int TeamIdNeutral = 0;
-
-        /// <summary>
-        /// ИД стороны. Боты будут атаковать всех кто не свой.
-        /// </summary>
-        [SerializeField] private int m_TeamId;
-        public int TeamId => m_TeamId;
-
-        #endregion
-
-        #region Score
-
-        /// <summary>
-        /// Кол-во очков за уничтожение.
-        /// </summary>
-        [SerializeField] private int m_ScoreValue;
-        public int ScoreValue => m_ScoreValue;
-
-        #endregion
-    
-    protected void Use(EnemyAsset asset)
-        {
-            m_HitPoints = asset.hp;
-            m_ScoreValue = asset.score;
-        }
-    
     }
 
 }
