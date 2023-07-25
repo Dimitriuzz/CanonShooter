@@ -6,10 +6,14 @@ namespace CannonShooter
 
     public class ScenesNavigation : MonoBehaviour
     {
-        public enum Scenes { main=0, map=1, intro1=2,level1=3}
+        public enum Scenes { main=0, intro1=1,level1=2}
 
         [SerializeField] private Scenes sceneToGo;
-        public void GoToMainMenu()
+        public void GoToScene(Scenes scenes)
+        {
+            SceneManager.LoadScene((int)scenes);
+        }
+       public void GoToScene()
         {
             SceneManager.LoadScene((int)sceneToGo);
         }

@@ -30,9 +30,7 @@ namespace CannonShooter
             {
                 StopLevelActivity();
                 
-                if (ReferenceTime <= Player.Instance.m_CurrentTime) levelScore -= 1;
-                           
-                MapCompletion.SaveEpisodeResult(levelScore);
+               
             }
             );
 

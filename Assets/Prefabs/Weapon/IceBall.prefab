@@ -4960,7 +4960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Nickname: 
-  m_Lifetime: 20
+  m_Lifetime: 2
   m_Damage: 1
   m_ImpactEffectPrefab: {fileID: 1329845292236604, guid: 955d4a4d85937aa40b2659d04e9aeedf, type: 3}
   m_FireSound: 4

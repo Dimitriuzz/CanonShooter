@@ -19,15 +19,11 @@ namespace CannonShooter
         [SerializeField] private Text m_TotalKills;
         public void NewGame()
         {
-            FileHandler.Reset(MapCompletion.filename);
-            FileHandler.Reset(Upgrades.filename);
+           
             SceneManager.LoadScene(1);
 
         }
-        private void Start()
-        {
-            continueButton.interactable= FileHandler.HasFile(MapCompletion.filename);
-        }
+        
 
         public void Continue()
         {

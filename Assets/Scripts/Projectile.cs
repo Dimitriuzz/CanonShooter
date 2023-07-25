@@ -16,11 +16,11 @@ namespace CannonShooter
         [SerializeField] private DamageType m_DamageType;
         
         private float m_Timer;
-        private Rigidbody rb;
+        
 
         private void Start()
         {
-            rb = GetComponent<Rigidbody>();
+            
             m_FireSound.Play();
         }
 
@@ -35,19 +35,7 @@ namespace CannonShooter
 
         private void Update()
         {
-            /*
-            float rayLenght = rb.velocity.magnitude * Time.deltaTime;
-
-            if (Physics.Raycast(transform.position, transform.forward, out var hit, rayLenght))
-            {
-                if (hit.transform.root.TryGetComponent<Enemy>(out var enemy))
-                {
-                    enemy.TakeDamage(m_Damage, m_DamageType);
-                    OnProjectileLifeEnd();
-                }
-            }
-            */
-            
+                    
             m_Timer += Time.deltaTime;
             
             if (m_Timer > m_Lifetime)

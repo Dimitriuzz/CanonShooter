@@ -19,9 +19,7 @@ namespace CannonShooter
 
         private float fireRate = 1;
 
-        [SerializeField] private UpgradeAsset healthUpgrade;
-        [SerializeField] private UpgradeAsset fireRateUpgrade;
-        [SerializeField] private UpgradeAsset timeUpgrade;
+
 
         [SerializeField] private Text enemiesKilledText;
         
@@ -70,7 +68,7 @@ namespace CannonShooter
 
         private void Start()
         {
-            m_LevelTime = CSLevelController.Instance.ReferenceTime + bonusTime;
+            m_LevelTime = CSLevelController.Instance.ReferenceTime;
             m_CurrentTime = m_LevelTime;
 
         }
