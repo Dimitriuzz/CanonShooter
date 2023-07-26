@@ -1,6 +1,6 @@
 
 using UnityEngine;
-using System;
+
 
 
 namespace CannonShooter
@@ -16,25 +16,27 @@ namespace CannonShooter
 
         private void Start()
         {
-            nextSpawn= UnityEngine.Random.Range(0.5f, 3);
+            nextSpawn= Random.Range(2, 3);
             time = 0;
         }
 
         private void Update()
         {
             time += Time.deltaTime;
+            Debug.Log(time + " " + nextSpawn);
             if(time>=nextSpawn)
             { 
                   
-                        var e = Instantiate(enemyPrefabs[UnityEngine.Random.Range(0,enemyPrefabs.Length)],
-                                             paths[UnityEngine.Random.Range(0, paths.Length)].StartArea.RandomInsideZone(),
-                                                    paths[UnityEngine.Random.Range(0, paths.Length)].StartArea.transform.rotation);
-                                              
+                        var e = Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)],
+                                             paths[Random.Range(0, paths.Length)].StartArea.RandomInsideZone(),
+                                                    paths[Random.Range(0, paths.Length)].StartArea.transform.rotation);
 
-                        e.GetComponent<AIController>().SetPath(paths[UnityEngine.Random.Range(0, paths.Length)]);
+                var z = Random.Range(0, paths.Length);
+                Debug.Log(z);
+                        e.GetComponent<AIController>().SetPath(paths[z]);
 
                 time = 0;
-                nextSpawn = UnityEngine.Random.Range(0.5f, 3);
+                nextSpawn = Random.Range(0.5f, 3);
             }
             
            
