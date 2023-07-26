@@ -35,6 +35,7 @@ namespace CannonShooter
             }
         }
         
+
         public void SetPath(Path newPath)
         {
             path = newPath;
