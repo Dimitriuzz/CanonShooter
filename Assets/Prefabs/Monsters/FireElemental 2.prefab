@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 7534873938989011067}
   - component: {fileID: 2132162454571189302}
   m_Layer: 3
-  m_Name: FireElemental
+  m_Name: FireElemental 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1002,7 +1002,7 @@ Transform:
   m_GameObject: {fileID: 4200389068683929593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1049557366315807592}
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_Nickname: 
   m_Indestructible: 0
   remainsPrefab: {fileID: 2176720462095903703, guid: aaf76b86d83093549818540a9b37a453, type: 3}
-  m_HitPoints: 2
+  m_HitPoints: 12
   deathEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   m_ScoreValue: 0
   m_EventOnDeath:

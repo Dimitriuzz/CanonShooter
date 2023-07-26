@@ -2168,7 +2168,7 @@ GameObject:
   - component: {fileID: 3284432420882298561}
   - component: {fileID: 1840049062345038095}
   m_Layer: 3
-  m_Name: IceElemental
+  m_Name: IceElemental 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2183,7 +2183,7 @@ Transform:
   m_GameObject: {fileID: 8798093528857214025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5675408766389020888}
@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_Nickname: 
   m_Indestructible: 0
   remainsPrefab: {fileID: 2176720462095903703, guid: eac0c9c697b62f948b753bf9dd428583, type: 3}
-  m_HitPoints: 4
+  m_HitPoints: 10
   deathEffect: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c, type: 3}
   m_ScoreValue: 0
   m_EventOnDeath:

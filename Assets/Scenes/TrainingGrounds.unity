@@ -462,6 +462,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: 6e9705af4ea1b6b46b43464099d05f14, type: 3}
   m_PrefabInstance: {fileID: 1573436373}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &62356336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62356337}
+  - component: {fileID: 62356338}
+  m_Layer: 0
+  m_Name: Wave (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &62356337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62356336}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &62356338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62356336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: b85c83aa957d98542bc2fb388063166f, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: caa795310daba574b866cbbfcaaf745e, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 51ea4d463cf0c3d4f9c85bc2c01bd8eb, type: 3}
+      count: 1
+  prepareTime: 15
+  next: {fileID: 425554327}
 --- !u!1 &90016081
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,10 +1003,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DoNotDestroyOnLoad: 0
-  m_NumLives: 1000
+  m_NumLives: 10
   m_Gold: 0
   enemiesKilledText: {fileID: 324502626}
   NumKills: 0
+--- !u!1 &187787780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187787781}
+  - component: {fileID: 187787782}
+  m_Layer: 0
+  m_Name: Wave (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &187787781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187787780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187787782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187787780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: b85c83aa957d98542bc2fb388063166f, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: caa795310daba574b866cbbfcaaf745e, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 51ea4d463cf0c3d4f9c85bc2c01bd8eb, type: 3}
+      count: 1
+  prepareTime: 15
+  next: {fileID: 2039643516}
 --- !u!1 &210681983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,6 +1389,62 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &321896797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321896798}
+  - component: {fileID: 321896799}
+  m_Layer: 0
+  m_Name: Wave (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &321896798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321896797}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &321896799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321896797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: 448a83d5115d7044b92c1156ab958028, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: 530d7c902ed5ee84f9e8b79891b2c4d1, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 8ce8eed5f881d0c4384da71bc81421ed, type: 3}
+      count: 1
+  prepareTime: 20
+  next: {fileID: 479040088}
 --- !u!1 &324502625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,8 +1942,64 @@ MonoBehaviour:
   - squads:
     - enemyPrefab: {fileID: 5817582961693404211, guid: b75acf5693ca5d9499e04c23462bd914, type: 3}
       count: 1
-  prepareTime: 10
+  prepareTime: 20
   next: {fileID: 1972181353}
+--- !u!1 &425554325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425554326}
+  - component: {fileID: 425554327}
+  m_Layer: 0
+  m_Name: Wave (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425554326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425554325}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425554327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425554325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: b85c83aa957d98542bc2fb388063166f, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: caa795310daba574b866cbbfcaaf745e, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 51ea4d463cf0c3d4f9c85bc2c01bd8eb, type: 3}
+      count: 1
+  prepareTime: 15
+  next: {fileID: 0}
 --- !u!1 &438867042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,7 +2215,7 @@ MonoBehaviour:
   damageBonus: 0
   progressBar: {fileID: 8842263258174856013}
   shootPoint: {fileID: 2101649123}
-  currentDamage: {fileID: 1554031580}
+  currentDamage: {fileID: 656635721}
   m_reloadTime: {fileID: 1146868106}
   m_reloadButton: {fileID: 1961003776}
   rotationSpeed: 0.2
@@ -2166,6 +2390,62 @@ Transform:
   m_Father: {fileID: 654674544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &479040086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479040087}
+  - component: {fileID: 479040088}
+  m_Layer: 0
+  m_Name: Wave (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479040087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479040086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479040088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479040086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: 448a83d5115d7044b92c1156ab958028, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: 530d7c902ed5ee84f9e8b79891b2c4d1, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 8ce8eed5f881d0c4384da71bc81421ed, type: 3}
+      count: 1
+  prepareTime: 20
+  next: {fileID: 1098716455}
 --- !u!1 &495068154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,7 +2544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -59}
+  m_AnchoredPosition: {x: -24.4, y: -59}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &497799126
@@ -3282,6 +3562,7 @@ GameObject:
   - component: {fileID: 840646247}
   - component: {fileID: 840646249}
   - component: {fileID: 840646248}
+  - component: {fileID: 840646250}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -3319,7 +3600,7 @@ MonoBehaviour:
   m_DoNotDestroyOnLoad: 0
   m_Sounds: {fileID: 11400000, guid: 51cb3d5101f32e94691594636d0e4308, type: 2}
   m_MusicVolume: 0.08
-  m_SoundVolume: 3
+  m_SoundVolume: 1
 --- !u!82 &840646249
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3416,6 +3697,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &840646250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840646246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64cf24ae92fb07d438c91a9360fad603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Music: 0
 --- !u!224 &848370696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4247,6 +4541,118 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c80b398710b58654bb57ade326959d81, type: 3}
+--- !u!1 &1098716453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1098716454}
+  - component: {fileID: 1098716455}
+  m_Layer: 0
+  m_Name: Wave (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1098716454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098716453}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098716455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098716453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: 448a83d5115d7044b92c1156ab958028, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: 530d7c902ed5ee84f9e8b79891b2c4d1, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 8ce8eed5f881d0c4384da71bc81421ed, type: 3}
+      count: 1
+  prepareTime: 20
+  next: {fileID: 1911134665}
+--- !u!1 &1105214753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1105214754}
+  - component: {fileID: 1105214755}
+  m_Layer: 0
+  m_Name: Wave (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1105214754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105214753}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1105214755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105214753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: b85c83aa957d98542bc2fb388063166f, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: caa795310daba574b866cbbfcaaf745e, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 51ea4d463cf0c3d4f9c85bc2c01bd8eb, type: 3}
+      count: 1
+  prepareTime: 15
+  next: {fileID: 62356338}
 --- !u!1 &1131213246
 GameObject:
   m_ObjectHideFlags: 0
@@ -5202,7 +5608,7 @@ MonoBehaviour:
   - squads:
     - enemyPrefab: {fileID: 7534873938989011067, guid: 913a1dc3f11678342a2c66f0473f585c, type: 3}
       count: 1
-  prepareTime: 10
+  prepareTime: 20
   next: {fileID: 421447011}
 --- !u!1 &1371272559
 GameObject:
@@ -5353,7 +5759,7 @@ MonoBehaviour:
   - squads:
     - enemyPrefab: {fileID: 5817582961693404211, guid: b75acf5693ca5d9499e04c23462bd914, type: 3}
       count: 1
-  prepareTime: 10
+  prepareTime: 20
   next: {fileID: 1359736978}
 --- !u!1 &1404033991
 GameObject:
@@ -5834,8 +6240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3.7719, y: 21.7112}
-  m_SizeDelta: {x: 85.8594, y: 43.4215}
+  m_AnchoredPosition: {x: 2.6632, y: 21.7112}
+  m_SizeDelta: {x: 104.5371, y: 43.4215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503391545
 MonoBehaviour:
@@ -5910,8 +6316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25, y: -67}
-  m_SizeDelta: {x: -105.509995, y: -109.69}
+  m_AnchoredPosition: {x: 13.3, y: -67}
+  m_SizeDelta: {x: -108.63, y: -109.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554031580
 MonoBehaviour:
@@ -6001,16 +6407,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groups:
   - squads:
-    - enemyPrefab: {fileID: 5817582961693404211, guid: b75acf5693ca5d9499e04c23462bd914, type: 3}
+    - enemyPrefab: {fileID: 5817582961693404211, guid: 448a83d5115d7044b92c1156ab958028, type: 3}
       count: 1
   - squads:
-    - enemyPrefab: {fileID: 1840049062345038095, guid: 97be76391a708a54b81587a0dc54e6c6, type: 3}
+    - enemyPrefab: {fileID: 7534873938989011067, guid: 530d7c902ed5ee84f9e8b79891b2c4d1, type: 3}
       count: 1
   - squads:
-    - enemyPrefab: {fileID: 7534873938989011067, guid: 913a1dc3f11678342a2c66f0473f585c, type: 3}
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 8ce8eed5f881d0c4384da71bc81421ed, type: 3}
       count: 1
-  prepareTime: 10
-  next: {fileID: 0}
+  prepareTime: 20
+  next: {fileID: 321896799}
 --- !u!1 &1566512765
 GameObject:
   m_ObjectHideFlags: 0
@@ -6100,6 +6506,15 @@ Transform:
   - {fileID: 421447010}
   - {fileID: 1972181352}
   - {fileID: 1560103084}
+  - {fileID: 321896798}
+  - {fileID: 479040087}
+  - {fileID: 1098716454}
+  - {fileID: 1911134664}
+  - {fileID: 187787781}
+  - {fileID: 2039643515}
+  - {fileID: 1105214754}
+  - {fileID: 62356337}
+  - {fileID: 425554326}
   m_Father: {fileID: 1566512767}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6657,6 +7072,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1911134663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911134664}
+  - component: {fileID: 1911134665}
+  m_Layer: 0
+  m_Name: Wave (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1911134664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911134663}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911134665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911134663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: b85c83aa957d98542bc2fb388063166f, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: caa795310daba574b866cbbfcaaf745e, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 51ea4d463cf0c3d4f9c85bc2c01bd8eb, type: 3}
+      count: 1
+  prepareTime: 20
+  next: {fileID: 187787782}
 --- !u!1 &1924881865
 GameObject:
   m_ObjectHideFlags: 0
@@ -7084,7 +7555,7 @@ MonoBehaviour:
   - squads:
     - enemyPrefab: {fileID: 1840049062345038095, guid: 97be76391a708a54b81587a0dc54e6c6, type: 3}
       count: 1
-  prepareTime: 10
+  prepareTime: 20
   next: {fileID: 1560103085}
 --- !u!1001 &1972350433
 PrefabInstance:
@@ -7292,6 +7763,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3950bd599acbcfd4194d882db9244b5e, type: 3}
+--- !u!1 &2039643514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2039643515}
+  - component: {fileID: 2039643516}
+  m_Layer: 0
+  m_Name: Wave (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2039643515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039643514}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1569559051}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039643516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039643514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154582a53d95ab24bbe99b01fff70735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groups:
+  - squads:
+    - enemyPrefab: {fileID: 5817582961693404211, guid: b85c83aa957d98542bc2fb388063166f, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 7534873938989011067, guid: caa795310daba574b866cbbfcaaf745e, type: 3}
+      count: 1
+  - squads:
+    - enemyPrefab: {fileID: 1840049062345038095, guid: 51ea4d463cf0c3d4f9c85bc2c01bd8eb, type: 3}
+      count: 1
+  prepareTime: 15
+  next: {fileID: 1105214755}
 --- !u!1 &2058486538
 GameObject:
   m_ObjectHideFlags: 0

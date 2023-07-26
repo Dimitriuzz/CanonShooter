@@ -25,7 +25,7 @@ namespace CannonShooter
         private void RecordEnemyDead() 
         {
             activeEnemyCount--;
-            m_EnemyCountText.text = "врагов: "+ activeEnemyCount.ToString();
+            if (m_EnemyCountText!=null) m_EnemyCountText.text = "врагов: "+ activeEnemyCount.ToString();
             if (activeEnemyCount == 0)
             {
                 if (currentWave)
@@ -69,7 +69,7 @@ namespace CannonShooter
             }
             OnWaveSpawned?.Invoke();
             currentWave = currentWave.PrepareNext(SpawnEnemies);
-            m_EnemyCountText.text = "врагов: " + activeEnemyCount.ToString();
+            if (m_EnemyCountText!= null) m_EnemyCountText.text = "врагов: " + activeEnemyCount.ToString();
             if (activeEnemyCount <= 3) m_EnemyCountText.color = Color.green;
             if (activeEnemyCount >= 8) m_EnemyCountText.color = Color.red;
             if (activeEnemyCount > 3&& activeEnemyCount<=7) m_EnemyCountText.color = Color.yellow;

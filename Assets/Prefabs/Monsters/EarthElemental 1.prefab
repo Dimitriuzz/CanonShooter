@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 709151299253243841}
   - component: {fileID: 5817582961693404211}
   m_Layer: 3
-  m_Name: EarthElemental
+  m_Name: EarthElemental 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,7 +1337,7 @@ Transform:
   m_GameObject: {fileID: 4496416220638403681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 773629565150415088}
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_Nickname: 
   m_Indestructible: 0
   remainsPrefab: {fileID: 2176720462095903703, guid: a32629258888b8b4fb1f37604213705a, type: 3}
-  m_HitPoints: 6
+  m_HitPoints: 12
   deathEffect: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00, type: 3}
   m_ScoreValue: 0
   m_EventOnDeath:

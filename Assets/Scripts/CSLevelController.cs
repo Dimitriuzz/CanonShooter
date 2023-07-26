@@ -18,6 +18,12 @@ namespace CannonShooter
             {
                 StopLevelActivity();
                 LevelResultController.Instance.Show(false);
+
+            };
+
+            EnemyWavesManager.OnAllWavesDead += () =>
+            {
+                LevelResultController.Instance.Show(true);
             };
 
             Player.Instance.OnTimeFinshed += () =>

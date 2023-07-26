@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 namespace CannonShooter
 {
-    /// <summary>
-    /// Панель результатов уровня. Должна лежать в каждом уровне без галочки DoNotDestroyOnLoad.
-    /// </summary>
+    
     public class LevelResultController : MonoSingleton<LevelResultController>
     { 
 
@@ -26,17 +24,10 @@ namespace CannonShooter
         private int goldScore;
         private int score;
 
-        /// <summary>
-        /// Показываем окошко результатов. Выставляем нужные кнопочки в зависимости от успеха.
-        /// </summary>
-        /// <param name="result"></param>
+        
         public void Show(bool result)
         {
-            /*if (result)
-            {
-                UpdateCurrentLevelStats();
-                UpdateVisualStats();
-            }*/
+          
             ResetPlayerStats();
             m_PanelSuccess?.gameObject.SetActive(result);
             m_PanelFailure?.gameObject.SetActive(!result);
@@ -46,17 +37,13 @@ namespace CannonShooter
            
         }
 
-        /// <summary>
-        /// Запускаем следующий уровен. Дергается эвентом с кнопки play next.
-        /// </summary>
+       
         public void OnPlayNext()
         {
             LevelSequenceController.Instance.AdvanceLevel();
         }
 
-        /// <summary>
-        /// Рестарт уровня. Дергается эвентом с кнопки restart в случае фейла уровня.
-        /// </summary>
+       
         public void OnRestartLevel()
         {
             LevelSequenceController.Instance.RestartLevel();
@@ -71,23 +58,16 @@ namespace CannonShooter
             public int gold;
         }
 
-        /// <summary>
-        /// Общая статистика за эпизод.
-        /// </summary>
+       
         public static Stats TotalStats { get; private set; }
 
-        /// <summary>
-        /// Сброс общей статистики за эпизод. Вызывается перед началом эпизода.
-        /// </summary>
+      
         public static void ResetPlayerStats()
         {
             TotalStats = new Stats();
         }
 
-        /// <summary>
-        /// Собирает статистику по текущему уровню.
-        /// </summary>
-        /// <returns></returns>
+       
         private void UpdateCurrentLevelStats()
         {
             TotalStats.numKills = Player.Instance.NumKills;

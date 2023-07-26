@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace CannonShooter
 {
-	public class CannonRandom : MonoSingleton<Cannon>
+	public class CannonRandom : MonoSingleton<CannonRandom>
 	{
 		[Header("Balls")]
 		public Rigidbody[] ballsPrefabs;
