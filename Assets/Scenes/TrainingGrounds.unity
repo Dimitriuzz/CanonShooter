@@ -1005,6 +1005,7 @@ MonoBehaviour:
   m_DoNotDestroyOnLoad: 0
   m_NumLives: 10
   m_Gold: 0
+  mode: 1
   enemiesKilledText: {fileID: 324502626}
   NumKills: 0
 --- !u!1 &187787780
@@ -3615,7 +3616,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5656,10 +5657,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DoNotDestroyOnLoad: 0
-  m_ReferenceTime: 300
   m_EventLevelCompleted:
     m_PersistentCalls:
       m_Calls: []
+  m_ReferenceTime: 300
 --- !u!1 &1388486363
 GameObject:
   m_ObjectHideFlags: 0

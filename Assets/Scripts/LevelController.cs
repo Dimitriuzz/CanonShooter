@@ -11,8 +11,8 @@ namespace CannonShooter
     public class LevelController : MonoSingleton<LevelController>
     {
 
-        [SerializeField] protected int m_ReferenceTime;
-        public int ReferenceTime => m_ReferenceTime;
+        
+        
 
         [SerializeField] protected UnityEvent m_EventLevelCompleted;
         
@@ -20,8 +20,10 @@ namespace CannonShooter
 
         private bool m_IsLevelCompleted; 
 
-        protected float m_LevelTime; 
-        public float LevelTime => m_LevelTime;
+       
+
+        [SerializeField] protected int m_ReferenceTime;
+        public int ReferenceTime => m_ReferenceTime;
 
         #region Unity events
 

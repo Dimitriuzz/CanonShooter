@@ -17,7 +17,11 @@ namespace CannonShooter
         private int m_LevelTime;
         public float m_CurrentTime { get; private set; }
 
-        private float fireRate = 1;
+        public enum gameMode { Demo=0, Real=1};
+
+        public gameMode mode;
+
+       
 
 
 
@@ -52,41 +56,34 @@ namespace CannonShooter
         #endregion
 
 
-        protected override void Awake()
-        {
-            base.Awake();
-            
-            //var level = Upgrades.GetUpgradeLevel(healthUpgrade);
-            //TakeDamage(-level * 5);
-            // if (Upgrades.GetUpgradeLevel(fireRateUpgrade)>0) fireRate = (1-Upgrades.GetUpgradeLevel(fireRateUpgrade)*0.1f);
-            Debug.Log("Fire rate " + fireRate);
-            // bonusTime = Upgrades.GetUpgradeLevel(timeUpgrade);
-            Debug.Log("bonus time" + bonusTime);
-            // bonusTime *= 5;
-            Debug.Log("bonus time1" + bonusTime);
-        }
+        
 
         private void Start()
         {
-            m_LevelTime = CSLevelController.Instance.ReferenceTime;
-            m_CurrentTime = m_LevelTime;
+            if (mode == gameMode.Real)
+            {
+                m_LevelTime = CSLevelController.Instance.ReferenceTime;
+                m_CurrentTime = m_LevelTime;
+            }
 
         }
 
         private void Update()
         {
-            if (m_CurrentTime <= 0) OnTimeFinshed?.Invoke();
-            else m_CurrentTime -= Time.deltaTime;
-            
-            if (m_LevelTime - m_CurrentTime > 0.99)
+            if (mode == gameMode.Real)
             {
-                m_LevelTime = (int)m_CurrentTime;
-                if (m_LevelTime <= 0) m_LevelTime = 0;
+                if (m_CurrentTime <= 0) OnTimeFinshed?.Invoke();
+                else m_CurrentTime -= Time.deltaTime;
 
-                OnTimeUpdate?.Invoke(m_LevelTime);
+                if (m_LevelTime - m_CurrentTime > 0.99)
+                {
+                    m_LevelTime = (int)m_CurrentTime;
+                    if (m_LevelTime <= 0) m_LevelTime = 0;
+
+                    OnTimeUpdate?.Invoke(m_LevelTime);
+                }
+
             }
-
-            
 
         }
 
@@ -123,7 +120,7 @@ namespace CannonShooter
 
         #region Score (current level only)
 
-        public int Score { get; private set; }
+       
 
         public int NumKills = 0;
 
@@ -133,10 +130,7 @@ namespace CannonShooter
             enemiesKilledText.text = "врагов убито: "+ NumKills.ToString();
         }
 
-        public void AddScore(int num)
-        {
-            Score += num;
-        }
+    
 
         #endregion
     }

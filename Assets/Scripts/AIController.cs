@@ -26,7 +26,7 @@ namespace CannonShooter
         private void Update()
         {
             if (path == null) return;
-            Debug.Log(transform.name+" path index " + pathIndex);
+            
             bool isInsidePatrolZone = (path[pathIndex].transform.position - transform.position).sqrMagnitude < path[pathIndex].Radius * path[pathIndex].Radius;
 
             if (isInsidePatrolZone)
@@ -70,18 +70,18 @@ namespace CannonShooter
         private void GetNewPoint()
         {
             pathIndex++;
-            Debug.Log(transform.name + " get new point " + pathIndex+" from"+path.Lenght);
+            
             if (path.Lenght > pathIndex)
             {
                 m_NavMeshAgent.SetDestination(path[pathIndex].transform.position);
-                Debug.Log(transform.name + " new point set " + pathIndex + " from" + path.Lenght);
+                
             }
             else
             {
-                Debug.Log(transform.name + " have to be destroyed " + pathIndex + " from" + path.Lenght);
+                
                 GetComponent<Destructible>().DeathEffectUse();;
                 CameraShake.Instance.ShakeCamera();
-                //OnPathEnd.Invoke();
+                OnPathEnd.Invoke();
                 Destroy(gameObject);
             }
         }

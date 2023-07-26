@@ -39,7 +39,8 @@ namespace CannonShooter
 
         protected override void OnDestroy()
         {
-            OnEnd?.Invoke();
+            if(Player.Instance.mode==Player.gameMode.Real) OnEnd?.Invoke();
+           
             base.OnDestroy();
         }
 

@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 136387625}
   - component: {fileID: 136387624}
   - component: {fileID: 136387623}
+  - component: {fileID: 136387626}
   m_Layer: 0
   m_Name: SoundPlayer
   m_TagString: Untagged
@@ -291,7 +292,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -388,6 +389,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136387626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136387622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64cf24ae92fb07d438c91a9360fad603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Music: 3
 --- !u!1 &211858685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,6 +1559,7 @@ GameObject:
   - component: {fileID: 905575164}
   - component: {fileID: 905575162}
   - component: {fileID: 905575165}
+  - component: {fileID: 905575166}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -1691,6 +1706,23 @@ MonoBehaviour:
   shootPoint: {fileID: 260088280}
   m_reloadTime: {fileID: 0}
   rotationSpeed: 1
+--- !u!114 &905575166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905575161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a26eeff7731c3478cf5676bbdf0198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DoNotDestroyOnLoad: 0
+  m_NumLives: 10000
+  m_Gold: 0
+  enemiesKilledText: {fileID: 0}
+  NumKills: 0
 --- !u!1 &937230728
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,10 +4,17 @@ namespace CannonShooter
 {
     public class CSLevelController : LevelController
     {
-        private int levelScore =3;
+
+        
+
+        //public float ReferenceTime { get; internal set; }
+        
         private new void Start()
         {
             base.Start();
+
+            //ReferenceTime = m_ReferenceTime;
+
             Player.Instance.OnPlayerDead += () =>
             {
                 StopLevelActivity();
@@ -40,16 +47,9 @@ namespace CannonShooter
             }
             );
 
-            void LifeScoreChange(int _)
-            {
-                levelScore -= 1;
-                
-                Player.Instance.OnLifeUpdate -= LifeScoreChange;
-            }
+           
             
-            Player.Instance.OnLifeUpdate += LifeScoreChange;
-            
-            m_LevelTime += Time.time;
+            //m_LevelTime += Time.time;
         }
 
         private void StopLevelActivity()
@@ -71,7 +71,7 @@ namespace CannonShooter
             DisableAll<EnemyWave>();
             DisableAll<Projectile>();
             DisableAll<NextWaveGUI>();
-            EnemyWavesManager.Instance.currentWave.next = null;
+            if (EnemyWavesManager.Instance.currentWave.next!=null) EnemyWavesManager.Instance.currentWave.next = null;
             
         }
     }

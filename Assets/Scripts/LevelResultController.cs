@@ -27,13 +27,16 @@ namespace CannonShooter
         
         public void Show(bool result)
         {
-          
-            ResetPlayerStats();
-            m_PanelSuccess?.gameObject.SetActive(result);
-            m_PanelFailure?.gameObject.SetActive(!result);
-            m_PanelResults.gameObject.SetActive(true);
-            UpdateCurrentLevelStats();
-            UpdateVisualStats();
+            if (Player.Instance.mode == Player.gameMode.Real)
+            {
+                Debug.Log(Player.Instance.mode);
+                ResetPlayerStats();
+                if (m_PanelSuccess.gameObject != null) m_PanelSuccess?.gameObject.SetActive(result);
+                if (m_PanelFailure.gameObject != null) m_PanelFailure?.gameObject.SetActive(!result);
+                if (m_PanelResults.gameObject != null) m_PanelResults.gameObject.SetActive(true);
+                UpdateCurrentLevelStats();
+                UpdateVisualStats();
+            }
            
         }
 
@@ -71,7 +74,7 @@ namespace CannonShooter
         private void UpdateCurrentLevelStats()
         {
             TotalStats.numKills = Player.Instance.NumKills;
-            TotalStats.time = (int)(LevelController.Instance.ReferenceTime-Player.Instance.m_CurrentTime);
+            TotalStats.time = (int)(CSLevelController.Instance.ReferenceTime-Player.Instance.m_CurrentTime);
             TotalStats.gold = Player.Instance.Gold;
             
 
@@ -95,22 +98,19 @@ namespace CannonShooter
             }
             else m_Record.text = "К сожалению рекорд "+score.ToString()+" не побит";
 
-            // бонус за время прохождения.
-            //int timeBonus = LevelController.Instance.ReferenceTime - (int)LevelController.Instance.LevelTime;
-
-            //if(timeBonus > 0)
-            // TotalStats.score += timeBonus;
+            
         }
 
-        /// <summary>
-        /// Метод обновления статов уровня.
-        /// </summary>
+      
         private void UpdateVisualStats()
         {
-            m_LevelTime.text = "Время "+TotalStats.time.ToString()+" счет "+timeScore.ToString();
-            m_TotalScore.text = "Общий счет "+TotalStats.score.ToString();
-            m_Gold.text = "Осталось золота " + TotalStats.gold.ToString() + " счет " + goldScore.ToString();
-            m_TotalKills.text = "Убито врагов "+TotalStats.numKills.ToString()+ " счет " + killsScore.ToString();
+            if (m_LevelTime != null)
+            {
+                m_LevelTime.text = "Время " + TotalStats.time.ToString() + " счет " + timeScore.ToString();
+                m_TotalScore.text = "Общий счет " + TotalStats.score.ToString();
+                m_Gold.text = "Осталось золота " + TotalStats.gold.ToString() + " счет " + goldScore.ToString();
+                m_TotalKills.text = "Убито врагов " + TotalStats.numKills.ToString() + " счет " + killsScore.ToString();
+            }
         }
     }
 }

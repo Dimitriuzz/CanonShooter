@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b1f03b38c69cf144b900d39e9eca4191
-  - enabled: 0
-    path: Assets/Scenes/LevelsMap.unity
-    guid: 008d848ab5a53114fab3d91c46df2967
   - enabled: 1
     path: Assets/Scenes/TrainingGroundsIntro.unity
     guid: 998fc3389b71a7444b536f125757a5cc
