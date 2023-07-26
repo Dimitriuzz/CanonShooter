@@ -69,9 +69,9 @@ namespace CannonShooter
 		private void AimCannon()
         {
 			var targetRotation = transform.rotation * Quaternion.Euler(0, Random.Range(-60, 60), 0);
-			Debug.Log(targetRotation);
+			
 			transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
-			//transform.rotation = Quaternion.Euler(0, Random.Range(-90,90), 0);
+			
         }
 
 		private void Fire()
